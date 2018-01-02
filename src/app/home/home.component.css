@@ -1,3 +1,8 @@
+.demo{
+  color: rgb(14, 29, 238);
+}
+
+
 body {
     min-height: 75rem; /* Can be removed; just added for demo purposes */
   }

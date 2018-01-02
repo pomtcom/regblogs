@@ -2,12 +2,12 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Ordinary blog</h1>
+      <h1 class="jumbotron-heading">regblogs.info</h1>
       <p class="lead text-muted">เรื่องราวธรรมดาของคนธรรมดา</p>
-      <p>
+      <!-- <p>
         <a href="#" class="btn btn-primary">Main call to action</a>
         <a href="#" class="btn btn-secondary">Secondary action</a>
-      </p>
+      </p> -->
     </div>
   </section>
 
@@ -26,9 +26,12 @@
 
 
 
+  <!-- <div class="demo">Test color below here</div>
+  <div [innerHTML]="calendar"></div> -->
 
 
-
+  <!-- วิธีเก็บ html เป็น string ทำตามด้านล่างนี้ -->
+  <!-- <div [innerHTML]="testHtml"></div> -->
 
 
 
@@ -39,7 +42,10 @@
         <div *ngFor="let topic of topics" class="card">
           <!-- <img src="../../assets/images/topic_1.jpg" height="200px" width="350px"> -->
           <img src={{topic.thumbnail}} height="200px" width="350px">
-          <p>{{ topic.topicName }}</p>
+          <h3 style="color:black;">{{ topic.topicName }}</h3>
+          <p style="color:grey;">{{ topic.shortDescrp }}</p>
+          <!-- <div>{{ topic.shortDescrp }}</div> -->
+          <!-- <div [innerHTML]="topic.shortDescrp"></div> -->
         </div>
 
 
