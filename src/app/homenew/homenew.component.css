@@ -4,10 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-3-col-portfolio/blob/master/LICENSE)
  */
 
-.demo {
-  color: blue;
-}
-
 body {
   padding-top: 54px;
 }
@@ -26,4 +22,11 @@ body {
   margin-bottom: 30px;
 }
 
+.red {
+  background-color: blue;
+  text-decoration: underline;
+}
 
+.highlight{
+  text-decoration: underline;
+}

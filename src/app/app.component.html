@@ -4,95 +4,36 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../../../favicon.ico">
-
-  <title>Album example for Bootstrap</title>
-
-  <!-- Bootstrap core CSS -->
-  <!-- <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
-  <!-- Custom styles for this template -->
-  <!-- <link href="album.css" rel="stylesheet"> -->
+  <title>regblogs.info</title>
 </head>
 
 
 <body>
 
-  <header>
+<header>
 
-    <div class="navbar navbar-dark bg-dark">
-      <div class="container d-flex justify-content-between">
-        <nav class="navbar-brand">
-          <a class="navbar-brand active"  routerLink="/home"  routerLinkActive="active">Home</a>
-          <a class="navbar-brand"         routerLink="/blogs" routerLinkActive="active">blogs</a>
-          <a class="navbar-brand"         routerLink="/blogs" routerLinkActive="active">About me</a>
-          <!-- <a class="navbar-brand" href="#">New features</a>
-          <a class="navbar-brand" href="#">Press</a>
-          <a class="navbar-brand" href="#">New hires</a>
-          <a class="navbar-brand" href="#">About</a>
-
-          <a class="navbar-brand" routerLink="/test1" routerLinkActive="active">test1</a>
-          <a class="navbar-brand" routerLink="/test2" routerLinkActive="active">test2</a> -->
-        </nav>
-        <!-- <a href="#" class="navbar-brand">Album</a> -->
-
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
-              aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
-      </div>
+  <div class="navbar navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+      <nav class="navbar-brand">
+        <a class="navbar-brand active" routerLink="/home" routerLinkActive="active">Home</a>
+        <a class="navbar-brand" routerLink="/blogs" routerLinkActive="active">blogs</a>
+        <a class="navbar-brand" routerLink="/aboutme" routerLinkActive="active">About me</a>
+      </nav>
     </div>
+  </div>
+
+  <router-outlet></router-outlet>
 
 
-    <!-- <div class="blog-masthead">
-          <div class="container">
-            <nav class="blog-nav">
-              <a class="blog-nav-item active" href="#">Home</a>
-              <a class="blog-nav-item" href="#">New features</a>
-              <a class="blog-nav-item" href="#">Press</a>
-              <a class="blog-nav-item" href="#">New hires</a>
-              <a class="blog-nav-item" href="#">About</a>
-    
-              <a class="blog-nav-item" routerLink="/test1" routerLinkActive="active">test1</a>
-              <a class="blog-nav-item" routerLink="/test2" routerLinkActive="active">test2</a>
-              <a class="blog-nav-item" routerLink="/blogs" routerLinkActive="active">blogs</a>
-            </nav>
-    
-          </div>
-        </div> -->
-
-
-    <!-- display router view here -->
-    <router-outlet></router-outlet>
-
-
-    <!-- <div class="collapse bg-dark" id="navbarHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 py-4">
-            <h4 class="text-white">About</h4>
-            <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences
-              long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or
-              contact information.</p>
-          </div>
-          <div class="col-sm-4 py-4">
-            <h4 class="text-white">Contact</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-white">Follow on Twitter</a>
-              </li>
-              <li>
-                <a href="#" class="text-white">Like on Facebook</a>
-              </li>
-              <li>
-                <a href="#" class="text-white">Email me</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-  </header>
-
+</header>
 
 </body>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">regblogs.info</p>
+    <p class="m-0 text-center text-white">Tawatchai Phetdumrongsakul</p>
+  </div>
+  <!-- /.container -->
+</footer>

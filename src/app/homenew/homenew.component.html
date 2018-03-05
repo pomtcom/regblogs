@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">regblogs.info</h1>
+    <p class="lead text-muted">เรื่องราวธรรมดาของคนธรรมดา</p>
+    <!-- <p>
+    <a href="#" class="btn btn-primary">Main call to action</a>
+    <a href="#" class="btn btn-secondary">Secondary action</a>
+    </p> -->
+  </div>
+</section>
+
+
+<!--<div class="album text-muted">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div *ngFor="let blog of blogsContent" class="card">-->
+<!--&lt;!&ndash; <img src="../../assets/images/topic_1.jpg" height="200px" width="350px"> &ndash;&gt;-->
+<!--<img src={{blog.thumbnail}} height="200px" width="350px">-->
+<!--<h3 style="color:black;">{{ blog.topic_name }}</h3>-->
+<!--<p style="color:grey;">{{ blog.short_description }}</p>-->
+<!--&lt;!&ndash; <div>{{ topic.shortDescrp }}</div> &ndash;&gt;-->
+<!--&lt;!&ndash; <div [innerHTML]="topic.shortDescrp"></div> &ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Page Heading -->
+  <!--<h1 class="my-4">Page Heading-->
+  <!--<small>Secondary Text</small>-->
+  <!--</h1>-->
+
+
+  <div class="row">
+    <div *ngFor="let blog of blogsContent" class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" (mouseenter)='blog.hover = true' (mouseleave)='blog.hover = false'
+                         src={{blog.thumbnail}} alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a [routerLink]="['/blogs', blog.publish_no]" [ngClass]="{'highlight': blog.hover}" (mouseenter)="blog.hover = true"
+               (mouseleave)="blog.hover = false" (click)="onClickTopic(blog.publish_no)">{{ blog.topic_name }}</a>
+          </h4>
+          <p class="card-text">{{ blog.short_description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <!-- Pagination -->
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+
+</div>
+<!-- /.container -->
+
+
+
+</body>
+
+</html>
