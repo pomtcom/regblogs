@@ -63,6 +63,11 @@ export class BackendService {
     return this.blogContentSelected;
   }
 
+  getAllBlogContentSelected(): Blogs[] {
+    console.log('get all blog is executing');
+    return this.blogsContentGlobal;
+  }
+
   init() {
     console.log('before call rest');
 

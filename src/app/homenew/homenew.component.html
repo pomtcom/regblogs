@@ -44,11 +44,15 @@
   <div class="row">
     <div *ngFor="let blog of blogsContent" class="col-lg-4 col-sm-6 portfolio-item">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" (mouseenter)='blog.hover = true' (mouseleave)='blog.hover = false'
-                         src={{blog.thumbnail}} alt=""></a>
+        <a [routerLink]="['/blogs', blog.publish_no]" (click)="onClickTopic(blog.publish_no)"><img class="card-img-top"
+                                                                                                   (mouseenter)='blog.hover = true'
+                                                                                                   (mouseleave)='blog.hover = false'
+                                                                                                   src={{blog.thumbnail}}
+                                                                                                   alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a [routerLink]="['/blogs', blog.publish_no]" [ngClass]="{'highlight': blog.hover}" (mouseenter)="blog.hover = true"
+            <a [routerLink]="['/blogs', blog.publish_no]" [ngClass]="{'highlight': blog.hover}"
+               (mouseenter)="blog.hover = true"
                (mouseleave)="blog.hover = false" (click)="onClickTopic(blog.publish_no)">{{ blog.topic_name }}</a>
           </h4>
           <p class="card-text">{{ blog.short_description }}</p>
@@ -85,7 +89,6 @@
 
 </div>
 <!-- /.container -->
-
 
 
 </body>
