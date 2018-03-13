@@ -28,7 +28,8 @@ export class BackendService {
 
   initializeApp(): Promise<any> {
     console.log(`InitialzaApp before call rest`);
-    const promise = this.http.get<Blogs[]>('http://localhost:8087/getallblogs')
+    // const promise = this.http.get<Blogs[]>('http://localhost:8087/getallblogs')
+    const promise = this.http.get<Blogs[]>('/api/getallblogs')
       .toPromise()
       .then(data => {
         console.log(`return from API: `, data);
