@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BackendService} from '../../service/backend/backend.service';
 import {Blogs} from '../custom.type';
@@ -7,7 +7,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-blogs',
   templateUrl: './blogs.component.html',
-  styleUrls: ['./blogs.component.css']
+  styleUrls: ['./blogs.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class BlogsComponent implements OnInit, OnDestroy {
 

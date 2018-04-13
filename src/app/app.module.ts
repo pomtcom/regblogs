@@ -5,20 +5,26 @@ import {RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
+// import {HomeComponent} from './home/home.component';
 import {BlogsComponent} from './blogs/blogs.component';
 import {PreviewComponent} from './preview/preview.component';
 import {HomenewComponent} from './homenew/homenew.component';
 import {BackendService} from '../service/backend/backend.service';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { CarwashcoinacceptComponent } from './carwashcoinaccept/carwashcoinaccept.component';
+import { CarwashcoinacceptenglishComponent } from './carwashcoinacceptenglish/carwashcoinacceptenglish.component';
 
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: '/homenew', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  // {path: 'home', component: HomeComponent},
   // { path: 'blogs', component: BlogsComponent},
   {path: 'preview', component: PreviewComponent},
-  {path: 'homenew', component: HomenewComponent},
-  {path: 'blogs/:id', component: BlogsComponent}
+  {path: 'home', component: HomenewComponent},
+  {path: 'aboutme', component: AboutmeComponent},
+  {path: 'blogs/:id', component: BlogsComponent},
+  {path: 'carwash-coinaccept-th', component: CarwashcoinacceptComponent},
+  {path: 'carwash-coinaccept-en', component: CarwashcoinacceptenglishComponent}
 ];
 
 export function init_app(appLoadService: BackendService) {
@@ -28,10 +34,13 @@ export function init_app(appLoadService: BackendService) {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    // HomeComponent,
     BlogsComponent,
     PreviewComponent,
-    HomenewComponent
+    HomenewComponent,
+    AboutmeComponent,
+    CarwashcoinacceptComponent,
+    CarwashcoinacceptenglishComponent
   ],
   imports: [
     BrowserModule,

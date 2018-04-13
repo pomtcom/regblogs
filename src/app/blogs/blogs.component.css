@@ -8,15 +8,15 @@
   color: blue;
 }
 
-body {
-  padding-top: 54px;
-}
+/*body {*/
+  /*padding-top: 54px;*/
+/*}*/
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
+/*@media (min-width: 992px) {*/
+  /*body {*/
+    /*padding-top: 56px;*/
+  /*}*/
+/*}*/
 
 .portfolio-item {
   margin-bottom: 30px;
@@ -26,4 +26,7 @@ body {
   margin-bottom: 30px;
 }
 
-
+.oversize {
+  width: 100%;
+  height: auto;
+}
