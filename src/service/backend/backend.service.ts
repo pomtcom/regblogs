@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Blogs} from '../../app/custom.type';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Blogs } from '../../app/custom.type';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -28,7 +28,7 @@ export class BackendService {
 
   initializeApp(): Promise<any> {
     console.log(`InitialzaApp before call rest`);
-    // const promise = this.http.get<Blogs[]>('http://localhost:8087/getallblogs')
+    // const promise = this.http.get<Blogs[]>('http://localhost:8087/api/getallblogs')
     const promise = this.http.get<Blogs[]>('/api/getallblogs')
       .toPromise()
       .then(data => {
@@ -41,6 +41,7 @@ export class BackendService {
       });
 
     return promise;
+    // return;
   }
 
   setBlogContentSelected(blogsClick: Blogs) {
@@ -91,10 +92,24 @@ export class BackendService {
   getBackEndGo() {
 
     console.log('executing get');
-    console.log('Result is : ');
-    console.log(this.configUrl);
+    // console.log('Result is : ');
+    // console.log(this.configUrl);
 
-    return this.http.get(this.configUrl);
+    this.http.get(this.configUrl).subscribe(data => {
+      console.log(data);
+      // return data;
+    });
+  }
+
+  getBackEndGoProxyPass(){
+    console.log('executing get');
+    // console.log('Result is : ');
+    // console.log(this.configUrl);
+
+    this.http.get('/api/people').subscribe(data => {
+      console.log(data);
+      // return data;
+    });
   }
 
   settestGlobalVal(valString: string) {

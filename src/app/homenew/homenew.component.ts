@@ -47,4 +47,20 @@ export class HomenewComponent implements OnInit {
     // const index = publish_no - 1;
     // this._backendService.setBlogContentSelected(this.blogsContent[index]);
   }
+
+  testService(){
+    console.log("Test service is executing");
+    this._backendService.getBackEndGo();
+    // var result = this._backendService.getApp();
+    // console.log('result is ', result);
+  }
+
+  testService2(){
+    console.log("Test service2 is executing");
+    this._backendService.getBackEndGoProxyPass();
+    // var result = this._backendService.getApp();
+    // console.log('result is ', result);
+  }
+
+
 }
